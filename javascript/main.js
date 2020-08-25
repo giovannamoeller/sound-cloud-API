@@ -1,6 +1,6 @@
 // Criação do Objeto
 
-let SoundCloudAPI = {} // por padrão, objeto normalmente começa com letra maíuscula
+let SoundCloudAPI = {}
 
 var UI = {}
 
@@ -11,7 +11,7 @@ UI.clear = () => { // limpar todos os cards
 // Pegar valor do input
 
 UI.enterPress = () => {
-    UI.clear()
+    UI.clear();
     document.querySelector(".js-search").addEventListener('keyup', e => {
         if (e.which == 13) {
             SoundCloudAPI.getMusica(document.querySelector(".input-search").value)
@@ -52,6 +52,7 @@ SoundCloudAPI.getMusica = inputValue => {
 // Mostrar as músicas (criação dinâmica de "cards")
 
 SoundCloudAPI.mostrarMusica = tracks => {
+    UI.clear();
     if (tracks == ""){
         document.querySelector(".cards").innerHTML = "Não foi encontrado nenhum resultado!"
     } else {
