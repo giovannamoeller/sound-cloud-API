@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1.0;'>
+    <title>SoundCloud Player</title>
+    <link rel='stylesheet' href='css/semantic.min.css'>
+    <link rel='stylesheet' href='css/main.css'>
+    <script src="https://connect.soundcloud.com/sdk/sdk-3.3.2.js"></script> <!-- API Soundcloud -->
+
+</head>
+
+<body id="soundcloud-player">
+
+    <div class="ui container col">
+
+        <div class="col-right">
+            <div class="main">
+                <div class="ui massive icon input">
+                    <input type="text" placeholder="Procurar por música ou artista" class="js-search input-search">
+                    <i class="search icon js-submit"></i>
+                </div>
+                <div class="search-results js-search-results ui cards"></div>
+            </div>
+        </div>
+        <div class="col-left js-playlist">
+            <div class="inner"></div>
+        </div>
+    </div>
+
+    <script src='javascript/semantic.min.js'></script>
+    <script src="javascript/main.js"></script>
+
+</body>
+
+</html>
